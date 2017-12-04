@@ -1,0 +1,28 @@
+// Declare and initialize plotControl structure
+struct plotControl myPlot;
+myPlot = plotGetDefaults("hist");
+plotSetLegend(&myPlot, "off");
+
+// Make histogram bars be unfilled
+plotSetBarFill( &myPlot, -1);
+
+// Create data and plot percentage histogram
+y = rndn( 1e3, 1 );
+plotHistP( myPlot, y, 16 );
+
+// Create data for 3 normal probability
+// density functions
+x = seqa(-4, 0.1, 80);
+y = pdfn(x);
+y = y~y*2~y*3;
+
+// Scale the normal curves to be similar
+// in height to the histogram
+y = y/7;
+
+// Re-use plotControl structure - set to
+// default values for XY graphs
+myPlot = plotGetDefaults("xy");
+
+// Add the curves to the histogram plot
+plotAddXY( myPlot, x, y );
