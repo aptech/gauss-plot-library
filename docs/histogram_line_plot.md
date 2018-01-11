@@ -4,4 +4,4 @@
 This file will generate a combined histogram and line plot using randomly generated data in GAUSS.
 
 ## Example
-![GAUSS Combined Histogram and Line Plot](histogram_line_plot_default.jpg)
+[![GAUSS Combined Histogram and Line Plot](histogram_line_plot_default.jpg)](..\src\histogram_line_plot.gss)
