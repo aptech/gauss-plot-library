@@ -7,4 +7,4 @@ This file will generate a combined histogram and line plot using randomly genera
 ![GAUSS Combined Histogram and Line Plot](histogram_line_plot_default.jpg)]
 
 ## Source Code
-Find the code for generating this graph [here](gauss-plot-library/src/histogram_line_plot.gss)
+Find the code for generating this graph [here](https://github.com/ec78/gauss-plot-library/blob/master/src/histogram_line_plot.gss)
