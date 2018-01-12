@@ -5,9 +5,8 @@ This file will generate an area graphusing hypothetical stock and bond price dat
 1. Creating a matrix in GAUSS
 2. Using a `for` loop in GAUSS
 3. Using a `plotControl` structure to customize graph features including
-  *  Changing fill options for bar graphs
   *  Setting plot title options including font and font size
-  *  Setting X and Y label options including font and font size
+  *  Setting X and Y axis label options including font and font size
   *  Setting area fill type and opacity
   *  Adding a legend to a GAUSS plot
 

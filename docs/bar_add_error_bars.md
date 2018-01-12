@@ -6,9 +6,9 @@ This file will generate a bar graph with added error bars using the data stored 
 2. Using a `plotControl` structure to customize graph features including
   *  Changing fill options for bar graphs
   *  Setting plot title options including font and font size
-  *  Setting X and Y label options including font and font size
+  *  Setting X and Y axis label options including font and font size
   *  Setting the plot line color for XY graphs
-2.  Adding error bars to a existing bar graph using `plotAddErrorBar`
+3.  Adding error bars to a existing bar graph using `plotAddErrorBar`
 
 
 ## Example

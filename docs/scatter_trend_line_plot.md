@@ -4,7 +4,7 @@
 This file will generate a scatter plot with an added trend line using randomly generated data in GAUSS. This file demonstrates:
 1.  Using the GAUSS `plotScatter` procedure
 2.  Using the GAUSS `plotAddXY` to add XY plots to an existing plot
-3. Estimating a regression using linear algebra in GAUSS
+3.  Estimating a regression using linear algebra in GAUSS
 
 
 ## Example
