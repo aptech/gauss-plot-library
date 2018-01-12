@@ -1,4 +1,3 @@
-```
 new;
 cls;
 
@@ -21,4 +20,3 @@ plotScatter( x, y );
 b_hat = (x'y)/(x'x);
 y_hat = b_hat*x;
 plotAddXY( x, y_hat);
-```
