@@ -1,3 +1,4 @@
+```
 new;
 cls;
 
@@ -15,3 +16,9 @@ x = pts[.,1];
 y = pts[.,2];
 
 plotScatter( x, y );
+
+//estimate regression line, y = b*x;
+b_hat = (x'y)/(x'x);
+y_hat = b_hat*x;
+plotAddXY( x, y_hat);
+```
