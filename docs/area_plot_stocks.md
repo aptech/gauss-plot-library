@@ -1,7 +1,7 @@
 # GAUSS Area Plot
 
 ## Description
-This file will generate an area graphusing hypothetical stock and bond price data. The data is directly input into a GAUSS matrix in the program file. A number of plot customization options are demonstrated including:
+This file will generate an area graph using hypothetical stock and bond price data. The data is directly input into a GAUSS matrix in the program file. A number of plot customization options are demonstrated including:
 1. Creating a matrix in GAUSS
 2. Using a `for` loop in GAUSS
 3. Using a `plotControl` structure to customize graph features including
