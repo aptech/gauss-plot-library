@@ -1,0 +1,34 @@
+new;
+
+// Declare plotControl structure
+struct plotControl myPlot;
+
+// Initialize plotControl structure
+myPlot = plotGetDefaults("xy");
+
+// Set up text interpreter
+plotSetTextInterpreter(&myPlot, "latex", "all");
+
+// Set up X-axis label
+label_string = "x";
+plotSetXLabel(&myPlot, label_string, "arial", 20);
+
+// Set up legend
+string legend_string = {
+"y_1 = \\cos{(x)}",
+"y_2 = \\sin{(\\frac{x}{2})} = \\pm \\sqrt{\\frac{1-\\cos{(x)}}{2}}",
+"y_3 = \\cos{(\\frac{x}{2})} = \\pm \\sqrt{\\frac{1+\\cos{(x)}}{2}}"};
+
+plotSetLegend(&myPlot, legend_string, "bottom",1);
+plotSetLegendFont(&myPlot, "arial", 20);
+
+// Set up title
+title_string = "Trigonometric\\ Functions";
+plotSetTitle(&myPlot, title_string, "arial", 24);
+
+// Create data
+n = 50;
+x = seqa(0,(2*pi)/(n-1), n);
+
+// Plot
+plotXY(myPlot, x, cos(x)~sin(x/2)~cos(x/2));
