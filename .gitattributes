@@ -1,4 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-*.gss linguist-detectable=true
+*.gss linguist-detectable=false
