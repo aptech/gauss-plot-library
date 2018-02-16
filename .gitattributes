@@ -2,3 +2,4 @@
 * text=auto
 
 *.gss linguist-language=C++
+*.gss linguist-detectable=true
