@@ -26,3 +26,4 @@ myPlot = plotGetDefaults("xy");
 
 // Add the curves to the histogram plot
 plotAddXY( myPlot, x, y );
+// -*- mode: C++;-*-

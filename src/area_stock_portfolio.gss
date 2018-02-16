@@ -1,4 +1,4 @@
-// -*- mode: C++;-*-
+
 new;
 
 //Define vectors to plot
@@ -82,3 +82,4 @@ plotSetFill(&myPlot, 1, 0.6);
 
 years = seqa(2000, 1, num_years + 1);
 plotArea(myPlot, years, portfolio_value);
+// -*- mode: C++;-*-

@@ -64,3 +64,4 @@ x = seqa(1, 1, num_ranges);
 
 //Draw error bars on bar plot
 plotAddErrorBar(ctl, x, mu, s);
+// -*- mode: C++;-*-
