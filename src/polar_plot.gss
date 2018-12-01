@@ -1,3 +1,4 @@
+new;
 
 // Declare plotControl structure
 struct plotControl myPlot;
@@ -5,17 +6,19 @@ struct plotControl myPlot;
 // Initialize plotControl structure
 myPlot = plotGetDefaults( "polar" );
 
-// Set line colors: first line to be
-// #00ffff an RGB color that is light-blue,
-// the second line will be #8a2be2 an RGB
-// color that corresponds to violet
+/*
+** Set line colors: first line to be
+** #00ffff an RGB color that is light-blue,
+** the second line will be #8a2be2 an RGB
+** color that corresponds to violet
+*/
 plotSetLineColor(&myPlot, getColorPalette("Set1"));
 
 // Create data
-n = seqa(0,1,101);
-theta =seqa(0,0.005,2/0.005+1)*pi;
-a = seqa(1,1,11);
+n = seqa(0, 1, 101);
+theta =seqa(0, 0.005, 2/0.005+1)*pi;
+a = seqa(1, 1, 11);
 radius = 6 + a'.*cos(6*theta);
 
 // Plot the data using the plotControl structure
-plotPolar( myPlot, radius, theta );
+plotPolar(myPlot, radius, theta);

@@ -1,22 +1,26 @@
 new;
 cls;
 
-//Draw scatterplot of random multivariate data
-//seed random generator with current time (hundredths of a second)
+/*
+** Draw scatterplot of random multivariate data
+** seed random generator with current time (hundredths of a second)
+*/
 t = time;
 rndseed t[4];
 
-//covariance matrix
+// Covariance matrix
 cov =  { 1 0.9, 0.9 1 };
-//vector of means
+
+// Vector of means
 mu = { 2, 2 };
 pts = rndMVn( 300, mu, cov);
-x = pts[.,1];
-y = pts[.,2];
+x = pts[., 1];
+y = pts[., 2];
 
-plotScatter( x, y );
+// Scatter plot
+plotScatter(x, y);
 
-//estimate regression line, y = b*x;
+// Estimate regression line, y = b*x;
 b_hat = (x'y)/(x'x);
 y_hat = b_hat*x;
-plotAddXY( x, y_hat);
+plotAddXY(x, y_hat);

@@ -1,10 +1,15 @@
-//Load 'Age' and 'Limit' variables
-//into a 2 column matrix
+new;
+
+/*
+** Load 'Age' and 'Limit' variables
+** into a 2 column matrix
+*/
 file = getGAUSSHome() $+ "/examples/credit.dat";
 data = loadd(file, "Age + Limit");
 
-age = data[.,1];
-limit = data[.,2];
+// Define age and limit data
+age = data[., 1];
+limit = data[., 2];
 
 num_ranges = 4;
 age_ranges = {  20 40,
@@ -12,14 +17,16 @@ age_ranges = {  20 40,
                 60 80,
                80 100 };
 
-//Pre-allocate vector to hold means
-//and standard deviation of the samples
-mu = zeros(num_ranges,1);
-s = zeros(num_ranges,1);
+/*
+** Pre-allocate vector to hold means
+** and standard deviation of the samples
+*/
+mu = zeros(num_ranges, 1);
+s = zeros(num_ranges, 1);
 
 for i(1, num_ranges, 1);
     // Get the index for different age level
-    level_idx = indexcat(age, age_ranges[i,.]');
+    level_idx = indexcat(age, age_ranges[i, .]');
 
     // mean of limit for different age level
     mu[i] = meanc(limit[level_idx]);
@@ -28,40 +35,47 @@ for i(1, num_ranges, 1);
     s[i] = stdc(limit[level_idx]);
 endfor;
 
-// Note: We will use HTML interpreter
-// for text labels, < is '&lt;' in html
-// '$|' is string concatenation
+/*
+** Note: We will use HTML interpreter
+** for text labels, < is '&lt;' in html
+*/
 labels = "20 &lt; age 	&le; 40" $|
          "40 &lt; age 	&le; 60" $|
          "60 &lt; age 	&le; 80" $|
          "80 &lt; age 	&le; 100";
 
-// Declare 'ctl' to be a plotControl structure
-// and fill with default settings for bar plots
+/*
+** Declare 'ctl' to be a plotControl structure
+** and fill with default settings for bar plots
+*/
 struct plotControl ctl;
 ctl = plotGetDefaults("bar");
 
-//Set bar fill to be: solid, 100% opaque and steel blue
+// Set bar fill to be: solid, 100% opaque and steel blue
 plotSetFill(&ctl, 1, 1, "steel blue");
 
-//Set title and axes labels
+// Set title and axes labels
 plotSetTitle(&ctl, "Credit Limits and Age", "arial", 20);
 plotSetYLabel(&ctl, "Credit Limits", "arial", 18);
 plotSetXLabel(&ctl, "Age", "arial", 18);
 
-//Draw bar plot
+// Draw bar plot
 plotBar(ctl, labels, mu);
 
-//File 'ctl' plotControl structure with
-//default settings for 'xy' plots
+/*
+** File 'ctl' plotControl structure with
+** default settings for 'xy' plots
+*/
 ctl = plotGetDefaults("xy");
 
+// Set line color
 plotSetLineColor(&ctl, "black");
 
-//'x' location of error bars
-//1 is first bar, 2 is second bar, etc
+/*
+** 'x' location of error bars
+** 1 is first bar, 2 is second bar, etc
+*/
 x = seqa(1, 1, num_ranges);
 
-//Draw error bars on bar plot
+// Draw error bars on bar plot
 plotAddErrorBar(ctl, x, mu, s);
-// -*- mode: C++;-*-

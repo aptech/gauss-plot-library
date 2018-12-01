@@ -1,17 +1,17 @@
 new;
 cls;
 
-//Sequence 1, 2, 3...12
+// Sequence 1, 2, 3...12
 x = seqa(1, 1, 12);
 
-//Create some random normal data, y ~ N(0, 1)
-y = rndn(12,1);
+// Create some random normal data, y ~ N(0, 1)
+y = rndn(12, 1);
 
-//12x1 vector of all 1's
-se = ones(12,1);
+// 12x1 vector of all 1's
+se = ones(12, 1);
 
-//Draw basic xy line plot, using default settings
+// Draw basic xy line plot, using default settings
 plotXY(x, y);
 
-//Add error bars with height of 1
+// Add error bars with height of 1
 plotAddErrorBar(x, y, se);
