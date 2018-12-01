@@ -9,7 +9,7 @@ This file will generate a xy plot using generated data. The plot includes LaTex 
   *  Adding a formatted legend to a GAUSS plot.
 
 ## Example
-![GAUSS Latex Labels](xy_latex_default.jpeg)
+![GAUSS Latex Labels](https://github.com/ec78/gauss-plot-library/blob/master/images/xy_latex_default.jpeg)
 
 ## Source Code
 Find the code for generating this graph [here](https://github.com/ec78/gauss-plot-library/blob/master/src/xy_latex.gss)

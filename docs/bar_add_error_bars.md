@@ -12,7 +12,7 @@ This file will generate a bar graph with added error bars using the data stored 
 
 
 ## Example
-![GAUSS Bar Graph with Error Bars](bar_add_error_bars_default.jpg)
+![GAUSS Bar Graph with Error Bars](https://github.com/ec78/gauss-plot-library/blob/master/images/bar_add_error_bars_default.jpg)
 
 ## Source Code
 Find the code for generating this graph [here](https://github.com/ec78/gauss-plot-library/blob/master/src/bar_add_error_bars.gss)

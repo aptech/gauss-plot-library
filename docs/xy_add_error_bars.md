@@ -8,7 +8,7 @@ This file will generate an xy plot with an added error bars using randomly gener
 
 
 ## Example
-![GAUSS XY Plot with Errorbars](xy_add_error_bars_default.jpeg)
+![GAUSS XY Plot with Errorbars](https://github.com/ec78/gauss-plot-library/blob/master/images/xy_add_error_bars_default.jpeg)
 
 ## Source Code
 Find the code for generating this graph [here](https://github.com/ec78/gauss-plot-library/blob/master/src/xy_add_error_bars.gss)

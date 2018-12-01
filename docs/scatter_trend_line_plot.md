@@ -8,7 +8,7 @@ This file will generate a scatter plot with an added trend line using randomly g
 
 
 ## Example
-![GAUSS Combined Histogram and Line Plot](scatter_trend_line_default.jpg)
+![GAUSS Combined Histogram and Line Plot](https://github.com/ec78/gauss-plot-library/blob/master/images/scatter_trend_line_default.jpg)
 
 ## Source Code
 Find the code for generating this graph [here](https://github.com/ec78/gauss-plot-library/blob/master/src/scatter_with_trend.gss)

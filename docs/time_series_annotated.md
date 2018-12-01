@@ -9,7 +9,7 @@ This file will generate a time series plot of hypothetical unemployment rate and
   *  Adding a left axis to a graph.
 
 ## Example
-![GAUSS Area Graph](time_series_annotated.png)
+![GAUSS Area Graph](https://github.com/ec78/gauss-plot-library/blob/master/images/time_series_annotated.png)
 
 ## Source Code
 Find the code for generating this graph [here](https://github.com/ec78/gauss-plot-library/blob/master/src/time_series_annotated.gss)
