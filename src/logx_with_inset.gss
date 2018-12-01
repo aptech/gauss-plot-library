@@ -1,0 +1,55 @@
+new;
+
+// Plot log X
+// Generate data
+x = seqa(.03, .04, 400);
+y = sin(x)^2 .* cos(x)^3 ./ (sin(x)+1);
+y1 = sin(x/2);
+y2 = cos(x/2);
+
+// Clear layout
+plotClearLayout();
+
+// Declare plot control structure
+struct plotControl myPlot;
+myPlot = plotGetDefaults("xy");
+
+// Set line colors
+clrs = getColorPalette("Set2", 3);
+plotSetLineColor(&myPlot, clrs);
+
+// Set up line width
+plotSetLineStyle(&myPlot, 1|2|2);
+
+// Set up line symbol
+plotSetLineSymbol(&myPlot, -1, 5);
+
+// Turn on legend
+plotSetLegend(&myPlot, "main"$|"sin(x/2)"$|"cos(x/2)", "bottom right", 1);
+
+// Set up title
+plotSettitle(&myPlot, "LOGX Graph with Insets", "simplex complex", 18);
+
+// Set up label
+plotSetXlabel(&myPlot, "Logarithmic X");
+
+// Log X plot
+plotlogx(myPlot, x, y~y1~y2);
+
+/*
+** First inset
+** main * sin(X/2)
+*/
+plotCustomLayout(0.1, 0.1, 0.4, 0.4);
+
+// No X-label
+plotSetXlabel(&myPlot, "");
+
+// Title
+plotSettitle(&myPlot, "main * sin(x/2)", "simplex", 12);
+
+// Turn off the legen
+plotSetLegend(&myPlot, "off");
+
+// Plot first inset
+plotlogx(myPlot, x, y.*y1);
