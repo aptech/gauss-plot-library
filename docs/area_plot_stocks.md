@@ -11,7 +11,7 @@ This file will generate an area graph using hypothetical stock and bond price da
   *  Adding a legend to a GAUSS plot
 
 ## Example
-![GAUSS Area Graph](area_stock_portfolio.jpeg)
+![GAUSS Area Graph](https://github.com/ec78/gauss-plot-library/blob/master/images/area_stock_portfolio.jpeg)
 
 ## Source Code
 Find the code for generating this graph [here](https://github.com/ec78/gauss-plot-library/blob/master/src/area_stock_portfolio.gss)
