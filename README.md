@@ -1,4 +1,4 @@
-![GAUSS](https://github.com/ec78/gauss-plot-library/blob/master/docs/polar_rose.jpg?raw=true)
+![GAUSS](https://github.com/ec78/gauss-plot-library/blob/master/images/polar_rose.jpg?raw=true)
 
 # GAUSS Plot Library
 The GAUSS plot library focuses on the graphic functionality of GAUSS. It provides example images of plots created in GAUSS along with the GAUSS code used to create the plots. Together these tools demonstrate how to create and format a variety of types of graphs in GAUSS. This library illustrates both fundamental graphing features as well as advanced plotting features in GAUSS, such as color schemes, graph annotation, and canvas sizing.
