@@ -37,7 +37,7 @@ plotSetXlabel(&myPlot, "Logarithmic X");
 plotlogx(myPlot, x, y~y1~y2);
 
 /*
-** First inset
+** Inset graph
 ** main * sin(X/2)
 */
 plotCustomLayout(0.1, 0.1, 0.4, 0.4);
@@ -48,8 +48,8 @@ plotSetXlabel(&myPlot, "");
 // Title
 plotSettitle(&myPlot, "main * sin(x/2)", "simplex", 12);
 
-// Turn off the legen
+// Turn off the legend
 plotSetLegend(&myPlot, "off");
 
-// Plot first inset
+// Plot inset
 plotlogx(myPlot, x, y.*y1);
