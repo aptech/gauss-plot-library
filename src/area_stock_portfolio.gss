@@ -1,7 +1,7 @@
 
 new;
 
-//Define vectors to plot
+// Define vectors to plot
 stock_return = { -0.093,
                  -0.1185,
                  -0.2197,
@@ -43,22 +43,22 @@ bond_return = { 0.1666,
                 0.0280,
                 0.0400 };
 
-//Portfolio starting value in thousands of dollars
+// Portfolio starting value in thousands of dollars
 starting_value = 10;
 
-//Percentage of portfolio in bonds and stocks
+// Percentage of portfolio in bonds and stocks
 bond_pct = 0.4;
 stock_pct = 1 - bond_pct;
 
-//Pre-initialize portfolio value matrix
+// Pre-initialize portfolio value matrix
 num_years = rows(bond_return);
 portfolio_value = zeros(num_years + 1, 2);
 
-//Fill in starting value of stocks and bonds
+// Fill in starting value of stocks and bonds
 portfolio_value[1, 1] = starting_value .* bond_pct;
 portfolio_value[1, 2] = starting_value .* stock_pct;
 
-//Calculate portfolio value from year 1 to year 'num_years'
+// Calculate portfolio value from year 1 to year 'num_years'
 stock_adjustment = 1 + stock_return;
 bond_adjustment = 1 + bond_return;
 
@@ -67,19 +67,22 @@ for i(2, num_years + 1, 1);
     portfolio_value[i, 2] = portfolio_value[i-1, 2] .* stock_adjustment[i-1];
 endfor;
 
-//Plot portfolio value using cumulative area plot
+// Plot portfolio value using cumulative area plot
 struct plotControl myPlot;
 myPlot = plotGetDefaults("area");
 
+// Set title for the plot
 plotSetTitle(&myPlot, "Portfolio Value", "Arial", 24);
 
+// Set plot legend
 plotSetLegend(&myPlot, "Bonds"$|"Stocks", "top left inside");
+
+// Axis labels
 plotSetYLabel(&myPlot, "Thousands of US $", "Arial", 16);
 plotSetXLabel(&myPlot, "");
 
-//Set fill type to solid and opacity to 60%
+// Set fill type to solid and opacity to 60%
 plotSetFill(&myPlot, 1, 0.6);
 
 years = seqa(2000, 1, num_years + 1);
 plotArea(myPlot, years, portfolio_value);
-// -*- mode: C++;-*-
