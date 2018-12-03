@@ -8,8 +8,10 @@ This file will generate a graph with a logarithmic x-axis using randomly generat
   *  Setting X and Y axis label options including font and font size
   *  Adding a legend to a GAUSS plot
 
-## Example
+## Examples
 ![GAUSS LogX Graph](https://github.com/ec78/gauss-plot-library/blob/master/images/logx_with_inset.jpeg)
+![GAUSS LogX Graph](https://github.com/ec78/gauss-plot-library/blob/master/images/logx_with_inset2.jpeg)
 
 ## Source Code
-Find the code for generating this graph [here](https://github.com/ec78/gauss-plot-library/blob/master/src/logx_with_inset.gss)
+Find the code for generating the first example graph [here](https://github.com/ec78/gauss-plot-library/blob/master/src/logx_with_inset.gss).
+Find the code for generating the second example graph [here](https://github.com/ec78/gauss-plot-library/blob/master/src/logx_with_inset2.gss).
