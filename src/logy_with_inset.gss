@@ -1,0 +1,37 @@
+new;
+
+// Generate data
+x = seqa(.01,.04,250);
+y = abs(sin(x)^2 .* cos(x)^2 ./ (sin(x)+1));
+
+// Plot control structure
+struct plotControl myPlot;
+myPlot = plotGetDefaults("xy");
+
+plotSetGrid(&myPlot, "off");
+
+// Title
+plotSettitle(&myPlot, "LOGY Graph with Polar Inset <br/> abs(sin(x)[2] * cos(x)[2] / (sin(x)+.8))", "Arial", 16);
+
+// Set axis label
+plotSetXlabel(&myPlot, "Sequence of X", "Arial", 12);
+plotSetYLabel(&myPlot, "Logarithmic Y Scale", "Arial", 12);
+
+// Set up the legend
+plotSetLegend(&myPlot, "f(x)"$|"f(x)*.4"$|"f(x)*.1"$|"f(x)*.02", "bottom right", 1);
+
+// Plot with logarithmic y axis
+plotlogy(myPlot, x,y~y*.4~y*.1~y*.02);
+
+// Add in the inset
+plotCustomLayout(0.3, 0.1, 0.4, 0.4);
+
+// Reset axis labels
+PlotSetXlabel(&myPlot, "");
+PlotSetYlabel(&myPlot,"");
+
+// Set up title
+plotSettitle(&myPlot, "Polar Representation", "Arial", 16);
+
+// Polar plot
+plotPolar(x,y);
