@@ -1,0 +1,55 @@
+new;
+
+// Generate data
+x = seqa(.06, .08, 500);
+y = sin(x)^2 .* cos(x)^3 ./ (sin(x)+1);
+
+// Plot control structure
+struct plotControl myPlot;
+myPlot = plotGetDefaults("xy");
+
+// Set up plot title
+plotSettitle(&myPlot, "Logarithmic Graph with XY Inset", "Arial", 18);
+
+//Turn off grid
+plotSetGrid(&myPlot, "off");
+
+// Set up x and y label
+plotSetXlabel(&myPlot, "Time - sec.", "Arial", 12);
+plotSetylabel(&myPlot, "Amplitude", "Arial", 12);
+
+// Set up X tics
+plotSetXRange(&myPlot, 0.04, 40);
+plotSetXTicInterval(&myPlot, 1, 0.04);
+
+// Set up y tics
+plotSetYRange(&myPlot, -0.8, 0.8);
+
+// Plot main graph
+plotlogx(myPlot, x, y);
+
+// Set up inset plot
+struct plotControl myInset;
+myInset = plotGetDefaults("xy");
+
+// Set up window
+plotCustomLayout(0.1, 0.1, 0.3, 0.4);
+
+// Inset grid
+plotSetGrid(&myInset, "off");
+
+// New title and axis labels
+plotSetXlabel(&myInset, "");
+plotSetYLabel(&myInset, "");
+plotSetTitle(&myInset, "");
+
+// Set up X tics
+plotSetXRange(&myInset, 0, 40);
+plotSetXTicInterval(&myInset, 10, 0);
+
+// Set up y tics
+plotSetYRange(&myInset, -0.8, 0.8);
+
+// Plot graph
+plotxy(myInset, x, y);
+
