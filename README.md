@@ -16,7 +16,7 @@ The program files require a working copy of GAUSS 18+. Many can be run on earlie
 ## Coverage
 |Graph|Image|
 |:----|:----|
-|[Stock portfolio area plot](docs/area_stock_portfolio.md)|![GAUSS area plot](images/area_stock_portfolio.jpeg)|
+|[Stock portfolio area plot](docs/area_plot_stocks.md)|![GAUSS area plot](images/area_stock_portfolio.jpeg)|
 |[Bar graph with error bars](docs/bar_add_error_bars.md)|![GAUSS bar graph with error bars](images/bar_add_error_bars_default.jpg)|
 |[Histogram with added line plot](docs/histogram_line_plot.md)|![GAUSS histogram plot](images/histogram_line_plot_default.jpg)|
 |[Log X-axis with Inset Plot](docs/logx_with_inset.md)|![GAUSS logX graph](images/logx_with_inset.jpeg)|
