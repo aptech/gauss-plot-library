@@ -13,5 +13,22 @@ The program files require a working copy of GAUSS 18+. Many can be run on earlie
 3. If the program file contains data it is stored in the "data" directory.
 4. These program files and their associated data files can be downloaded directly into the examples directory in the GAUSS home directory.
 
+## Coverage
+|Graph|Image|
+|:----|:----|
+|[Stock portfolio area plot](src/area_stock_portfolio.md)|![GAUSS area plot](images/area_stock_portfolio.jpeg)|
+|[Bar graph with error bars](src/bar_add_error_bars.md)|![GAUSS bar graph with error bars](images/bar_add_error_bars_default.jpg)|
+|[Histogram with added line plot](src/histogram_line_plot.md)|![GAUSS histogram plot](images/histogram_line_plot_default.jpg)|
+|[Log X-axis with Inset Plot](src/logx_with_inset.md)|![GAUSS logX graph](images/logx_with_inset.jpeg)|
+|[Log Y-axis with Inset Plot](src/logy_with_inset.md)|![GAUSS logY graph](images/logy_with_inset.jpeg)|
+|[Horizontally plotted odds ratios](src/odds_ratio_horizontal.md)|![GAUSS horizontal odds ratio](images/odds_ratio_horizontal.jpeg)|
+|[Polar rose plot](src/polar_rose.md)|![GAUSS polar rose](images/polar_rose.jpg)|
+|[Scatter plot with a trend line](src/scatter_trend_line_plot.md)|![GAUSS polar rose](images/scatter_trend_line_default.jpg)|
+|[Annotated time series plot](src/time_series_annotated.md)|![GAUSS annotated time series](images/time_series_annotated.png)|
+|[XY plot with added error bars](src/xy_add_error_bars.md)|![GAUSS annotated time series](images/xy_add_error_bars_default.jpeg)|
+|[XY plot with LaTex labels](src/xy_latex.md)|![GAUSS XY plot with LaTex labels](images/xy_latex_default.jpeg)|
 ## Authors
-*  Erica Clower - [Aptech Systems, Inc](www.aptech.com)
+Erica Clower  
+[email us](mailto:eclower@aptech.com)  
+[LinkedIn](https://linkedin.com/in/ericaclower)  
+[Aptech Systems, Inc](https://www.aptech.com/)
