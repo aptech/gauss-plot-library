@@ -1,4 +1,4 @@
-# GAUSS Scatter Plot With Trend Line
+# GAUSS scatter plot with trend line
 
 ## Description
 This file will generate a scatter plot with an added trend line using randomly generated data in GAUSS. This file demonstrates:

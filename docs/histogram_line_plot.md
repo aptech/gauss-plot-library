@@ -1,4 +1,4 @@
-# GAUSS Combined Histogram Line Plot Guide
+# GAUSS combined histogram line plot
 
 ## Description
 This file will generate a combined histogram and line plot using randomly generated data in GAUSS. A number of plot customization options are demonstrated including:

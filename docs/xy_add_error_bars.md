@@ -1,4 +1,4 @@
-# GAUSS XY Plot with Added Errorbars
+# GAUSS XY plot with added error bars
 
 ## Description
 This file will generate an xy plot with an added error bars using randomly generated data in GAUSS. This file demonstrates:

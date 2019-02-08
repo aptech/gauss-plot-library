@@ -1,4 +1,4 @@
-# GAUSS Time Series Annotated Plot
+# GAUSS time series annotated plot
 
 ## Description
 This file will generate a time series plot of hypothetical unemployment rate and median worker weekly earnings. The data is directly input into a GAUSS matrix in the program file. A number of plot  :ture to customize graph features including

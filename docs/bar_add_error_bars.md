@@ -1,4 +1,4 @@
-# GAUSS Bar Graph with Added Error Bars
+# GAUSS bar graph with added error bars
 
 ## Description
 This file will generate a bar graph with added error bars using the data stored in the GAUSS dataset [credit](https://github.com/ec78/gauss-plot-library/blob/master/data/credit.dat). A number of plot customization options are demonstrated including:

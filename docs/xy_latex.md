@@ -1,4 +1,4 @@
-# GAUSS Area Plot
+# GAUSS xy plot with LaTex labels
 
 ## Description
 This file will generate a xy plot using generated data. The plot includes LaTex labels and a LaTex legend. A number of plot customization options are demonstrated including:

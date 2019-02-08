@@ -1,4 +1,4 @@
-# GAUSS Polar Rose
+# GAUSS polar rose
 
 ## Description
 This file will generate a polar graph using the GAUSS `plotPolar` procedure. The data is generated in the program. A number of plot customization options are demonstrated including:
