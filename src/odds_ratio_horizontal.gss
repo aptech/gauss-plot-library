@@ -1,0 +1,168 @@
+/*
+** This section sets up data matrices
+*/
+/*  In this example 'res' is the output of fitting 16 logistic
+**  regression models with 1 predictor in each.
+**  The first column is the estimated ln-odds ratio,
+**  column 2 is the lower CI limit for the ln OR ,
+**  col 3 is the uppper limit of a 95% CI for the ln-odds ratio
+*/
+res = {1.9336911        1.0883315        2.7790507,
+       1.9146184        1.0743836        2.7548531,
+       2.4234702        1.1540854        3.6928550,
+      0.70918738      -0.38956745        1.8079422,
+       2.2902549       0.77581141        3.8046984,
+       2.2499178        1.3422782        3.1575575,
+       3.3694986        2.1808542        4.5581430,
+      0.84550216      0.040664703        1.6503396,
+       1.3361210       0.48374283        2.1884992,
+       1.9919269        1.1181427        2.8657111,
+       1.1030389       0.26788761        1.9381902,
+       1.7730695       0.91789304        2.6282460,
+      0.69166264      -0.40709219        1.7904175,
+      0.32506798       -1.5086434        2.1587794,
+     -0.97365312       -1.7880127      -0.15929357,
+      0.65766143      -0.20202114        1.5173440};
+
+/*
+** These names represent the names of the
+** separate models.
+*/
+let string riskname = {"Alfa", "Bravo", "Charlie", "Delta", "Echo",
+                    "Foxtrot", "Golf", "Hotel", "India", "Juliette",
+                    "Kilo", "Lima", "Mike", "November", "Oscar", "Papa"};
+
+/*
+** Sort confidence intervals and names
+** based on odds ratios in column one
+** of the res matrix
+*/
+/*
+** Find order of sorted data using sortind.
+** This function can be used to sort several
+** matrices in the same way that the reference
+** matrix is sorted.
+*/
+ind = rev(sortind(res[.,1]));
+
+// Use indices to sort res and name
+sortres = res[ind, .];
+sortname = riskname[ind];
+
+/*
+** This section sets up controls for
+** the basic plot
+*/
+// Declare instance of plotControl structure
+struct plotControl myPlot;
+myPlot = plotGetDefaults("scatter");
+
+// Declare instance of annotation structure
+struct plotAnnotation myAnnotation;
+myAnnotation = annotationGetDefaults();
+
+// Turn off Y-axis
+plotSetYAxisShow(&myPlot, 0);
+
+// Turn grid on and set color
+plotSetGrid(&myPlot, "major", "grey");
+
+// Make symbol for CI solid circle
+plotSetLineSymbol(&myPlot, 0);
+
+// Set symbol to be filled
+plotSetLineStyle(&myPlot, 1);
+
+// Symbol color is black
+plotSetLineColor(&myPlot, "black");
+
+// Symbol thickness
+plotSetLineThickness(&myPlot, 8);
+
+// Set up label on axis
+plotSetTicLabelFont(&myPlot, "Arial", 14, "black");
+plotSetXLabel(&myPlot, "ln(Odds Ratio) with 95% CIs", "Arial", 18, "black");
+
+/*
+** Set up the y-axis range to
+** be equal to the number of regressions
+** plus 1
+*/
+plotSetYRange(&myPlot, 0, 1+rowS(res));
+
+// Set number of tics on y-axis
+plotSetYTicCount(&myPlot, rows(res));
+
+// Set up the x-axis range and tics
+plotSetXRange(&myPlot, -2, 5);
+plotSetXTicCount(&myPlot, 8);
+
+// Set y-values
+yplot = seqa(rows(res),-1, rows(res));
+
+// Plot odds ratio as scatter plot
+plotScatter(myplot, sortres[.,1], yplot);
+
+/*
+** This section adds confidence intervals
+** as added shapes
+*/
+// Set color for confidence interval line
+annotationSetLineColor(&myAnnotation, "black");
+
+// Set line thickness to 3 pixel
+annotationSetLineThickness(&myAnnotation, 3);
+
+// Add the lines to graph
+plotAddshape(myAnnotation, "line", sortres[., 2] , yplot ,sortres[., 3] , yplot);
+
+/*
+** This section adds the line at 0
+**/
+// Change color to red
+annotationSetLineColor(&myAnnotation, "red");
+
+// Set line thickness to default 2 pixel
+annotationSetLineThickness(&myAnnotation, 2);
+
+// Add line
+plotAddshape(myAnnotation, "line", 0 , 0 ,0 , maxc(yplot)+1);
+
+
+/*
+** This section adds the labels
+** on the y-axis as a text box
+*/
+annotationSetLineThickness(&myAnnotation, 0);
+annotationSetFont(&myAnnotation, "Arial", 16, "black" );
+i = 1;
+do until i gt rows(yplot);
+    labtext = sortname[i];
+    xtext = -2.1;
+    ytext = .75 + yplot[i];
+    plotAddTextbox(myAnnotation,labtext, xtext, ytext);
+    i = i + 1;
+endo;
+
+/*
+** This section sets up annotation boxes
+** for graph sections.
+*/
+struct plotAnnotation myTextbox;
+myTextbox = annotationGetDefaults();
+
+// et textbox background to 'light gray' with 20% opacity
+annotationSetBkd(&myTextbox, "light gray", 0.2);
+
+// Turn off line surrounding textbox by setting thickness to 0px
+annotationSetLineThickness(&myTextbox, 0);
+
+// Change text in annotation box
+annotationSetBkd(&myTextbox, "light gray", 0.2);
+
+// Set up font in text box
+annotationSetFont(&myTextbox, "arial", 12, "black");
+
+// Add annotation
+plotAddTextbox(myTextbox, "Outcome Less Likely", -1.5, 17);
+plotAddTextbox(myTextbox, "Outcome More Likely", 0.25, 17);
