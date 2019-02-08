@@ -1,4 +1,4 @@
-# GAUSS LogX plot with inset graph
+# GAUSS LogY plot with inset graph
 
 ## Description
 This file will generate a graph with a logarithmic y-axis using generated data. A number of plot customization options are demonstrated including:

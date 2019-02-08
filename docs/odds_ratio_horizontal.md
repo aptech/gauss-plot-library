@@ -1,4 +1,4 @@
-# GAUSS Horizontal Odds Ratio With Confidence Intervals
+# GAUSS horizontal odds ratio with confidence intervals
 
 ## Description
 This file will generate an 'east-west' plot of odds ratios with confidence intervals. Regression labels are plotted on
