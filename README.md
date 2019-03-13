@@ -27,6 +27,7 @@ The program files require a working copy of **GAUSS 18+**. Many can be run on ea
 |[Annotated time series plot](docs/time_series_annotated.md)|![GAUSS annotated time series](images/time_series_annotated.png)|
 |[XY plot with added error bars](docs/xy_add_error_bars.md)|![GAUSS annotated time series](images/xy_add_error_bars_default.jpeg)|
 |[XY plot with LaTex labels](docs/xy_latex.md)|![GAUSS XY plot with LaTex labels](images/xy_latex_default.jpeg)|
+|[Grid scatter plot](docs/grid-plot-adjusted-canvas.md)|![GAUSS grid scatter plot](images/grid-plot-adjusted-canvas.jpeg)|
 
 ## Authors
 [Erica Clower](mailto:eclower@aptech.com)  
