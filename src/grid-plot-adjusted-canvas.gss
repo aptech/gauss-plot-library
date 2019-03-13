@@ -1,0 +1,56 @@
+// Load data
+fin = __FILE_DIR $+ "ScatterData.xlsx";
+d = xlsreadm(fin, "a2:m121", 1, "");
+sa = xlsreadsa(fin, "a1:m1", 1, "")';
+
+
+// Set up plot control structure
+struct plotControl myPlot;
+myPlot = plotGetDefaults("scatter");
+
+// Make symbol for CI solid circle
+plotSetLineSymbol(&myPlot, 0, 5);
+
+// Set symbol to be filled
+plotSetLineStyle(&myPlot, 1);
+
+// Symbol color is black
+plotSetLineColor(&myPlot, "black");
+
+// Set tic font
+plotSetTicLabelFont(&myPlot, "Arial", 10, "black");
+plotSetYLabel(&myPlot, "Y", "Arial", 8, "black");
+
+
+Y = d[.,1];
+
+// Define variables
+OrganDose = d[.,2:cols(d)];
+Organname = sa[2:rowS(sa)];
+ 
+/*
+** Adjust plot canvas size to make tic labels
+** more readable
+*/
+plotCanvasSize("in", 13.5|13);
+
+i = 1;
+do until i gt cols(OrganDose);
+    // Set layout
+    plotLayout(4, 3, i);
+    
+    // Data to be plotted
+    temp = packr(OrganDose[.,i] ~ Y);
+    
+    // Set X label
+    plotSetXLabel(&myPlot, Organname[i], "Arial", 16, "black");
+    
+    // Plot data
+    plotScatter(myplot,temp[., 1], temp[., 2]);         
+  
+    i = i + 1;
+endo;
+
+
+
+
