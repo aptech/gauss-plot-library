@@ -14,6 +14,4 @@ Find the code for generating this graph [here](https://github.com/ec78/gauss-plo
 ## Data
 The accompanying data is found in the file [ScatterData.xlsx](https://github.com/ec78/gauss-plot-library/blob/master/data/ScatterData.xlsx). It should be placed in the same directory as the program file.
 
-::: info
-**Note:** This plot example was contributed by [Mark Conaway](https://med.virginia.edu/phs/2017/09/07/conaway-mark-r-ph-d/). The data is generated data meant to simulate physiological measurements after radiation treatment for cancer.
-:::
+> **Note:** This plot example was contributed by [Mark Conaway](https://med.virginia.edu/phs/2017/09/07/conaway-mark-r-ph-d/). The data is generated data meant to simulate physiological measurements after radiation treatment for cancer.
