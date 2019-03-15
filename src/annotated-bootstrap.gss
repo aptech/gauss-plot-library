@@ -1,0 +1,103 @@
+// Clear GAUSS workspace
+new;
+
+// Load data from the 4th column of 'yarn.xlsx' into 'x'
+x = xlsReadM(getGAUSSHome() $+ "examples/yarn.xlsx", "D2");
+
+// Pre-allocate vector to hold bootstrap samyPlotles
+iters = 1000;
+mu_boot = zeros(iters, 1);
+
+/*
+** Declare 'myPlot' to be a plotControl structure
+** and fill in with default values
+*/
+struct plotControl myPlot;
+myPlot = plotGetDefaults("bar");
+
+// Set range for X and Y axes
+plotSetXRange(&myPlot, 0, 1500);
+y_max = 0.15;
+plotSetYRange(&myPlot, 0, y_max);
+
+// Set title and X and Y label text
+plotSetTitle(&myPlot, "Textile stress: bootstrap percentile method", "Times New Roman", 24);
+plotSetXLabel(&myPlot, "Cycles until failure (Bootstrap sample means)", "Helvetica", 16);
+plotSetYLabel(&myPlot, "Density");
+
+/*
+** Set fill for histogram to be solid (1)
+** and 40% opaque (0.4);
+*/
+plotSetFill(&myPlot, 1, 0.4);
+
+// Set random number seed for repeable random numbers
+rndseed 21493;
+
+
+for i(1, iters, 1);
+    // Take random sample with replacement
+    sample = sampleData(x, rows(x), 1);
+
+    // Calculate mean of sample and add to output vector
+    mu_boot[i] = meanc(sample);
+endfor;
+
+/*
+** Calculate 95% confidence region
+** by sorting samples and selecting
+** the element 2.5% from start and 2.5% from end
+*/
+mu_boot = sortc(mu_boot, 1);
+ci = 0.025 | 0.975;
+ci = round(ci .* rows(mu_boot));
+
+/*
+** Draw percentage histogram of bootstrap means with 20 bins
+** using settings applied to 'myPlot' structure
+*/
+plotHistP(myPlot, mu_boot, 20);
+
+// Add text box
+x_start = mu_boot[40];
+y_start = 0.015;
+plotAddTextBox("95% Confidence interval", x_start, y_start);
+
+// Add a double-sided arrow
+x_start = mu_boot[ci[1]];
+y_start = 0.007;
+x_end = mu_boot[ci[2]];
+y_end = 0.007;
+head_size = { 10, 10 };
+plotAddArrow(x_start, y_start, x_end, y_end, head_size);
+
+// Add second text box and arrows
+plotAddTextBox("Original sample mean", meanc(x) + 110, 0.129);
+plotAddArrow(meanc(x), 0.125, meanc(x) + 100, 0.125, 0|10);
+
+/*
+** Declare 'myAnnotation' to be a plotAnnotation
+** structure and fill with defaults
+*/
+struct plotAnnotation myAnnotation;
+myAnnotation = annotationGetDefaults();
+
+// Turn off line around rectangle
+annotationSetLineThickness(&myAnnotation, 0);
+
+// Set background to white with 40% opacity
+annotationSetBkd(&myAnnotation, "white", 0.4);
+
+// Add textboxes outside of 95% confidence interval
+plotAddShape(myAnnotation, "rectangle", 0, 0, mu_boot[ci[1]], y_max);
+plotAddShape(myAnnotation, "rectangle", mu_boot[ci[2]], 0, 1500, y_max);
+
+// Fill 'myPlot' with 'xy' default settings
+myPlot = plotGetDefaults("xy");
+
+// Set line color and line style
+plotSetLineColor(&myPlot, "black");
+plotSetLineStyle(&myPlot, 2);
+
+// Add line to show mean of original sample
+plotAddXY(myPlot, meanc(x)|meanc(x), 0|0.15);
