@@ -1,4 +1,4 @@
-# GAUSS scatter plot grid with adjusted canvas size
+# GAUSS histogram plot with annotations
 
 ## Description
 This file will generate histogram plot of the bootstrapped mean of . This file demonstrates:
