@@ -1,7 +1,7 @@
 # GAUSS histogram plot with annotations
 
 ## Description
-This file will generate histogram plot of the bootstrapped mean of data series. This file demonstrates:
+This file will generate an annotated histogram plot of the bootstrapped mean of data series. This file demonstrates:
 1.  How to add annotation arrows to an existing plot using `plotAddArrow`.
 2.  How to add a text box to an existing plot using `plotAddTextbox`.
 3.  How to add a shaded rectangle to an existing plot usin `plotAddShape`.
