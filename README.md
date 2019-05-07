@@ -1,14 +1,23 @@
-![GAUSS](https://github.com/ec78/gauss-plot-library/blob/master/images/polar_rose.jpg?raw=true)
-
 # GAUSS Plot Library
-The **GAUSS** plot library focuses on the graphic functionality of **GAUSS**. It provides example images of plots created in **GAUSS** along with the **GAUSS** code used to create the plots. Together these tools demonstrate how to create and format a variety of types of graphs in **GAUSS**. This library illustrates both fundamental graphing features as well as advanced plotting features in **GAUSS**, such as color schemes, graph annotation, and canvas sizing.
+
+![Wage Data Plots](images/wage_data_plot.jpeg)
+
+## What is GAUSS?
+GAUSS is an easy-to-use data analysis, mathematical and statistical environment based on the powerful, fast and efficient GAUSS Matrix Programming Language. GAUSS is a complete analysis environment with the built-in tools you need for estimation, forecasting, simulation, visualization and more.
+
+## What is the GAUSS plot library?
+The [**GAUSS**](www.aptech.com) plot library focuses on the graphic functionality of [**GAUSS**](www.aptech.com). It provides example images of plots created in [**GAUSS**](www.aptech.com) along with the [**GAUSS**](www.aptech.com) code used to create the plots. Together these tools demonstrate how to create and format a variety of types of graphs in [**GAUSS**](www.aptech.com). This library illustrates both fundamental graphing features as well as advanced plotting features in [**GAUSS**](www.aptech.com), such as color schemes, graph annotation, and canvas sizing.
+![GAUSS](images/polar_rose.jpg?raw=true)
+
+## Structure of repository
+Images and descriptions of graph examples are stored in the "doc" directory as .md files. These files contain links to the GAUSS program files that are used to create the graphs. The program files are stored as .gss files in the "src" directory. The naming structure is consistent between the .md files and the .gss files. For example, the code for creating the graph illustrated in the file ["doc/bar_add_error_bars.md"](docs/bar_add_error_bars.md) is found in file  ["src/bar_add_error_bars.gss"](src/bar_add_error_bars.gss).
 
 ## Getting Started
 ### Prerequisites
-The program files require a working copy of **GAUSS 18+**. Many can be run on earlier versions with some small revisions.
+The program files require a working copy of [**GAUSS 18+**](www.aptech.com). Many can be run on earlier versions with some small revisions.
 
 ### Installing
-1. Images and descriptions of graph examples are stored in the "doc" directory as .md files. These files contain links to the **GAUSS** program files that are used to create the graphs.
+1. Images and descriptions of graph examples are stored in the "doc" directory as .md files. These files contain links to the [**GAUSS**](www.aptech.com) program files that are used to create the graphs.
 2. The program files are stored as .gss files in the "src" directory. The naming structure is consistent between the .md files and the .gss files. For example, the code for creating the graph illustrated in the file "doc/bar_add_error_bars.md" is found in file "src/bar_add_error_bars.gss".
 3. If the program file contains data it is stored in the "data" directory.
 4. These program files and their associated data files can be downloaded directly into the examples directory in the **GAUSS** home directory.
