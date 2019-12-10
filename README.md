@@ -39,7 +39,7 @@ The program files require a working copy of [**GAUSS 18+**](www.aptech.com). Man
 |[Grid scatter plot](docs/grid-plot-adjusted-canvas.md)|![GAUSS grid scatter plot](images/grid-plot-adjusted-canvas.jpeg)|
 |[Annotated histogram](docs/annotated-bootstrap.md)|![GAUSS annotated histogram plot](images/annotated-bootstrap.jpeg)|
 ## Authors
-[Erica Clower](mailto:eclower@aptech.com)  
+[Erica Clower](mailto:erica@aptech.com)  
 [Aptech Systems, Inc](https://www.aptech.com/)  
 [![alt text][1.1]][1]
 [![alt text][2.1]][2]
