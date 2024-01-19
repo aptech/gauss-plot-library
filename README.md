@@ -14,7 +14,7 @@ Images and descriptions of graph examples are stored in the "doc" directory as .
 
 ## Getting Started
 ### Prerequisites
-The program files require a working copy of [**GAUSS 18+**](www.aptech.com). Many can be run on earlier versions with some small revisions.
+The program files require a working copy of [**GAUSS 24+**](www.aptech.com). Many can be run on earlier versions with some small revisions.
 
 ### Installing
 1. Images and descriptions of graph examples are stored in the "doc" directory as .md files. These files contain links to the [**GAUSS**](www.aptech.com) program files that are used to create the graphs.
@@ -38,9 +38,21 @@ The program files require a working copy of [**GAUSS 18+**](www.aptech.com). Man
 |[XY plot with LaTex labels](docs/xy_latex.md)|![GAUSS XY plot with LaTex labels](images/xy_latex_default.jpeg)|
 |[Grid scatter plot](docs/grid-plot-adjusted-canvas.md)|![GAUSS grid scatter plot](images/grid-plot-adjusted-canvas.jpeg)|
 |[Annotated histogram](docs/annotated-bootstrap.md)|![GAUSS annotated histogram plot](images/annotated-bootstrap.jpeg)|
-## Authors
 
-[Erica Clower](mailto:erica@aptech.com)  
+## Related Readings
+More information about creating and editing GAUSS plots can be found on the [GAUSS Data Analytics blog](https://www.aptech.com/blog/).
+1. [Introduction to Efficient Creation of Detailed Plots](https://www.aptech.com/blog/introduction-to-efficient-creation-of-detailed-plots/)
+2. [Advanced Formatting Techniques for Creating AER Quality Plots](https://www.aptech.com/blog/advanced-formatting-techniques-for-creating-aer-quality-plots/)
+3. [Visualizing COVID-19 Panel Data With GAUSS 22](https://www.aptech.com/blog/visualizing-covid-19-panel-data-with-gauss-22/) 
+4. [How to Create Tiled Graphs in GAUSS](https://www.aptech.com/blog/how-to-create-tiled-graphs-in-gauss/)
+5. [How to Interactively Create Reusable Graphics Profiles](https://www.aptech.com/blog/how-to-interactively-create-reusable-graphics-profiles/) 
+6. [How to Mix, Match and Style Different Graph Types](https://www.aptech.com/blog/how-to-mix-match-and-style-different-graph-types/)
+7. [Five Hacks For Creating Custom GAUSS Graphics](https://www.aptech.com/blog/five-hacks-for-creating-custom-gauss-graphics/) 
+8. [Graph High Frequency Forex Data](https://www.aptech.com/blog/graph-high-frequency-forex-data/)    
+    
+    
+## Authors
+[Eric Clower](mailto:eric@aptech.com)  
 [Aptech Systems, Inc](https://www.aptech.com/)  
 [![alt text][1.1]][1]
 [![alt text][2.1]][2]
